@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innvitee Youth</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            text-align: center;
+            padding: 2em 0;
+            background: #333;
+            color: #fff;
+        }
+        .partner {
+            text-align: center;
+            margin: 1em 0;
+        }
+        .content {
+            padding: 2em;
+            text-align: center;
+        }
+        .gallery {
+            display: flex;
+            overflow-x: scroll;
+            padding: 1em 0;
+        }
+        .gallery img {
+            max-width: 100%;
+            margin: 0 1em;
+            height: auto;
+        }
+        form {
+            max-width: 600px;
+            margin: 2em auto;
+            padding: 1em;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        form input, form select, form textarea {
+            width: calc(100% - 22px);
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        form input[type="submit"] {
+            width: 100%;
+            background: #333;
+            color: #fff;
+            border: none;
+            padding: 15px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .contacts {
+            padding: 2em;
+            background: #333;
+            color: #fff;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Innvitee Youth</h1>
+</header>
+
+<div class="partner">
+    <img src="esn_turkiye_logo.png" alt="ESN Türkiye Logo">
+    <p>We are proud to partner with ESN Türkiye to offer quality housing for Erasmus students in Istanbul.</p>
+</div>
+
+<div class="gallery">
+    <!-- Example images of houses -->
+    <img src="house1.jpg" alt="House 1">
+    <img src="house2.jpg" alt="House 2">
+    <img src="house3.jpg" alt="House 3">
+</div>
+<p style="text-align: center;">*These are examples from last years.</p>
+
+<div class="content">
+    <form action="submit_form.php" method="post">
+        <label for="name">Name - Surname:</label><br>
+        <input type="text" id="name" name="name" required><br>
+        
+        <label for="origin">Where do you come from:</label><br>
+        <input type="text" id="origin" name="origin" required><br>
+        
+        <label for="district">Which districts are you interested in:</label><br>
+        <select id="district" name="district" required>
+            <option value="kadikoy">Kadıköy</option>
+            <option value="taksim">Taksim (Cihangir)</option>
+            <option value="sisli">Şişli</option>
+            <option value="besiktas">Beşiktaş</option>
+            <option value="uskudar">Üsküdar</option>
+            <option value="other">Other (Please State Where)</option>
+        </select><br>
+        
+        <label for="university">Which University will you study at in Istanbul?</label><br>
+        <input type="text" id="university" name="university" required><br>
+        
+        <label for="living_preference">Do you prefer to live alone or do you prefer a shared house?</label><br>
+        <input type="text" id="living_preference" name="living_preference" required><br>
+        
+        <label for="price_range">What is your price range?</label><br>
+        <select id="price_range" name="price_range" required>
+            <option value="300-350">300-350 Euros</option>
+            <option value="350-400">350-400 Euros</option>
+            <option value="400-450">400-450 Euros</option>
+            <option value="450-500">450-500 Euros</option>
+            <option value="500-550">500-550 Euros</option>
+            <option value="550+">550+ Euros</option>
+        </select><br>
+        
+        <label for="phone">Phone Number (WhatsApp):</label><br>
+        <input type="text" id="phone" name="phone" required><br>
+        
+        <label for="email">Mail Address (that you use actively):</label><br>
+        <input type="email" id="email" name="email" required><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
+<div class="contacts">
+    <h2>Contact Us</h2>
+    <p>Details coming soon</p>
+</div>
+
+</body>
+</html>
